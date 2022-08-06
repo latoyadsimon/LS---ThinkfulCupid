@@ -1,0 +1,212 @@
+/* -------  General Styles ------- */
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #6b1a22;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 10px 15px 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+section.alternate-background {
+  background-color: #a35766;
+  color: #ecdbc9;
+}
+
+/* main img {
+  width: 100px;
+} */
+
+/* ---  Groups & Items --- */
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
+}
+
+
+
+/* -------  Navigation ------- */
+
+header {
+  background-color: #83092e;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Tangerine", cursive;
+  font-size: 72px;
+  color: #ecdbc9;
+}
+
+/* style the container for the navigation*/
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+ /* Style the unordered list*/
+ header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+/* Style the anchor tags of the list items*/
+header nav ul li a {
+  color: #ecdbc9;
+  text-decoration: none;
+  padding: 0 20px 0 0;
+}
+
+/* Style the last list items anchor*/
+header nav ul li:last-child a {
+  margin-right: 0;
+}
+
+header nav ul li a:hover {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+/* -------  Join Form ------- */
+#join img {
+  width: 100%;
+}
+
+form {
+ 
+  border: 2px solid #6b1a22;
+  padding: 10px;
+  text-align: left;
+ justify-content: center;
+  
+}
+
+form label {
+  font-weight: bold;
+  text-align: left;
+}
+
+form select,
+form input {
+  display: flex;
+  margin-bottom: 20px;
+  width: 180px;
+
+}
+
+form button {
+  background-color: #83092e;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
+  width: 100%;
+}
+.form-space {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+/* about */
+#about img {
+  width: 100%;
+}
+
+/* download */
+#download img {
+  width: 100%;
+}
+/* blog */
+#blog img {
+  width: 100%;
+}
+
+/* -------  Footer ------- */
+
+footer {
+  background-color: #83092e;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* -------  Media Query ------- */
+ /* Add a media query for desktop*/
+   @media all and (min-width: 480px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+  
+    header h1 {
+      margin: 14px 0;
+      padding-top: 0;
+      font-size: 48px;
+    }
+  
+    header nav {
+      margin-top: 8px;
+    }
+    header nav ul li a:hover {
+      color: #bdbdbd;
+    }
+
+    .group {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .item {
+      flex: 1;
+      margin: 10px;
+    }
+    
+    .item-double {
+      flex: 2;
+      margin: 10px;
+    }
+    
+    .item-triple {
+      flex: 3;
+    }
+  }
