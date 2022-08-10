@@ -3,6 +3,7 @@
 body {
   font-family: "Lato", sans-serif;
   color: #6b1a22;
+  margin: 0;
 }
 
 h2 {
@@ -44,7 +45,7 @@ section.alternate-background {
 
 .item {
   flex: 1;
-  margin: 10px;
+  /* margin: 10px; */
 }
 
 .item-double {
@@ -56,14 +57,16 @@ section.alternate-background {
 /* -------  Navigation ------- */
 
 header {
+ 
   background-color: #83092e;
   padding: 20px 20px 0 20px;
   text-align: center;
+  
 }
 
 .logo {
   font-family: "Tangerine", cursive;
-  font-size: 72px;
+  font-size: 48px;
   color: #ecdbc9;
 }
 
@@ -102,31 +105,48 @@ header nav ul li a:hover {
 }
 
 /* -------  Join Form ------- */
+
+#join .item {
+  display:flex;
+ align-items:  center;
+}
+
+#join .item div {
+  width: 100%;
+}
+
 #join img {
   width: 100%;
 }
 
 form {
- 
   border: 2px solid #6b1a22;
   padding: 10px;
   text-align: left;
- justify-content: center;
+ 
   
 }
 
 form label {
   font-weight: bold;
   text-align: left;
+  font-size: 12px;
 }
 
 form select,
 form input {
   display: flex;
   margin-bottom: 20px;
-  width: 180px;
+ max-width: 70%;
+ min-width: 50px;
+ width:auto;
+  
 
 }
+form select {
+width: 70%;
+}
+
 
 form button {
   background-color: #83092e;
@@ -143,10 +163,15 @@ form button {
   
 }
 
+
+
 /* about */
 #about img {
   width: 100%;
+ 
 }
+
+
 
 /* download */
 #download img {
@@ -155,7 +180,9 @@ form button {
 /* blog */
 #blog img {
   width: 100%;
+ 
 }
+
 
 /* -------  Footer ------- */
 
@@ -171,11 +198,24 @@ footer p {
 
 /* -------  Media Query ------- */
  /* Add a media query for desktop*/
+ @media all and (min-width: 900px) {
+  form select {
+    width: auto;
+    min-width: 180px;
+  }
+ }
+
+
+
+
    @media all and (min-width: 480px) {
+    .logo {
+      font-size: 36px;
+    }
     header {
       display: flex;
       justify-content: space-between;
-      padding: 0 30px;
+      /* padding: 0 30px; */
     }
   
     header h1 {
@@ -191,16 +231,15 @@ footer p {
       color: #bdbdbd;
     }
 
+    /* form select {
+      width: auto;
+    } */
+
     .group {
       display: flex;
       flex-direction: row;
     }
-    
-    .item {
-      flex: 1;
-      margin: 10px;
-    }
-    
+   
     .item-double {
       flex: 2;
       margin: 10px;
@@ -208,5 +247,18 @@ footer p {
     
     .item-triple {
       flex: 3;
+    }
+
+    #about .item {
+      margin-right: 20px;
+    }
+
+    #blog .item {
+      margin:  10px;
+    }
+
+    #download .item{
+      display: flex;
+      align-items: center;
     }
   }
